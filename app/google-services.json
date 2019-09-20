@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "657135607967",
+    "firebase_url": "https://quanlythuvien-master.firebaseio.com",
+    "project_id": "quanlythuvien-master",
+    "storage_bucket": "quanlythuvien-master.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:657135607967:android:418e093e41aa91db",
+        "android_client_info": {
+          "package_name": "com.example.quanlythuvien"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "657135607967-bk7cr69skmuh4ucmimgr5eeqe3ihebeo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.quanlythuvien",
+            "certificate_hash": "b49ef1d2097d0d8669744daedb1ebfe8a81113b2"
+          }
+        },
+        {
+          "client_id": "657135607967-njr71m517sn3a30bgq3fbht2dcslrps8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcZQ1wqA75QdBtfgVM8j7kgf76n2Mcoug"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "657135607967-njr71m517sn3a30bgq3fbht2dcslrps8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
