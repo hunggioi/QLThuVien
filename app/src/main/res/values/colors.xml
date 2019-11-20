@@ -3,4 +3,9 @@
     <color name="colorPrimary">#E4F98A</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#F4102A</color>
+    <color name="xanhduong">#DD03A9F4</color>
+    <color name="xam">#44E0E0DE</color>
+    <color name="xanhduongdam">#BA0088F5</color>
+    <color name="trang">#F5FDFC</color>
+    <color name="trangnhat">#8BFFFFFF</color>
 </resources>
