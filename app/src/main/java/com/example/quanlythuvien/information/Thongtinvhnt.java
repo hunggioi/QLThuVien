@@ -1,4 +1,4 @@
-package com.example.quanlythuvien;
+package com.example.quanlythuvien.information;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,14 +8,18 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class Thongtinttt extends AppCompatActivity {
+import com.example.quanlythuvien.Book;
+import com.example.quanlythuvien.R;
+import com.example.quanlythuvien.update.Updatevhnt;
+
+public class Thongtinvhnt extends AppCompatActivity {
     EditText edtmasachtt,edttacgiatt,edttensachtt,edtnxbtt,edtsotrangtt;
     Button btnthoattt,btncapnhat;
     private Book sach;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.thongtinttt);
+        setContentView(R.layout.thongtinvhnt);
         addcontrols();
         addevent();
         loaddata();
@@ -35,7 +39,7 @@ public class Thongtinttt extends AppCompatActivity {
         btncapnhat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(Thongtinttt.this, Updatettt.class);
+                Intent intent=new Intent(Thongtinvhnt.this, Updatevhnt.class);
                 Bundle load = new Bundle();
                 load.putSerializable("keycntt", sach);
                 intent.putExtra("ahihicntt",load);
@@ -45,7 +49,7 @@ public class Thongtinttt extends AppCompatActivity {
         btnthoattt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Thongtinttt.this.onBackPressed();
+                Thongtinvhnt.this.onBackPressed();
             }
         });
     }

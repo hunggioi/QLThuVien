@@ -1,4 +1,4 @@
-package com.example.quanlythuvien;
+package com.example.quanlythuvien.information;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +7,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import com.example.quanlythuvien.Book;
+import com.example.quanlythuvien.R;
+import com.example.quanlythuvien.update.Updatecntt;
 
 public class Thongtincntt extends AppCompatActivity {
     EditText edtmasachtt,edttacgiatt,edttensachtt,edtnxbtt,edtsotrangtt;
