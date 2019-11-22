@@ -8,4 +8,147 @@
     <color name="xanhduongdam">#BA0088F5</color>
     <color name="trang">#F5FDFC</color>
     <color name="trangnhat">#8BFFFFFF</color>
+    <color name="transparent">#0000</color>
+    <color name="HattoPrimary">#c12026</color>
+    <color name="white">#ffffff</color>
+    <color name="textGrey">#a5a5a5</color>
+    <color name="black">#000000</color>
+    <color name="blue">#0E65D7</color>
+    <color name="grey">#eeeeee</color>
+    <color name="red">#D62839</color>
+    <color name="lightgreen">#A0D468</color>
+    <color name="green">#6EAF27</color>
+    <color name="lightgrey">#F5F5F5</color>
+    <color name="profile_gray">#e1e1e1</color>
+    <color name="profile_background">#F8F8F8</color>
+    <color name="veryLightPink">#fdebe9</color>
+    <color name="yellowOrange">#f7b500</color>
+    <color name="barGray">#e1e1e1</color>
+    <color name="predictYellow">#ffcb3c</color>
+    <color name="predictRed">#d83b3b</color>
+    <color name="predictGreen">#6dd400</color>
+    <color name="outsideBox">#A6000000</color>
+    <color name="PaleGrey">#f3f5f9</color>
+    <color name="whitefour">#f4f4f4</color>
+    <color name="location_black">#0d0b0b</color>
+    <color name="time_line">#5a5a5a</color>
+    <color name="grey4a">#4a4a4a</color>
+    <color name="greyKM">#c2c2c2</color>
+    <color name="vip_border">#fc7804</color>
+    <color name="vip_text">#fc7804</color>
+    <color name="vip_backgrouund">#79fc7804</color>
+    <color name="pumpkinOrange85">#fc7804</color>
+    <color name="grayE6">#e6e6e6</color>
+    //profile
+    <color name="whiteFour">#f4f4f4</color>
+    <color name="whiteThree">#efefef</color>
+    <color name="whiteTwo">#f8f8f8</color>
+    <color name="whiteOne">#e1e1e1</color>
+    <color name="paleGrey">#f3f5f9</color>
+    <color name="paleGreyThree">#e7e9ee</color>
+    <color name="boder_avatar_Vip">#f7b500</color>
+    <color name="toolbarVip">#faac3c</color>
+    <color name="usernameVip">#ef8e3a</color>
+    <color name="bg_body_vip">#ffefd6</color>
+    <color name="bg_body_main_vip">#f3d6aa</color>
+    <color name="bg_input_profile_vip">#ffe4ba</color>
+    <color name="bg_bottom_azure">#0091ff</color>
+    <color name="grey43">#434343</color>
+    <color name="ababab">#ababab</color>
+    <color name="sky_blue">#398ae4</color>
+    <color name="white_seven">#ebebeb</color>
+    <color name="greyish">#afafaf</color>
+    <color name="emeralGreen">#008f18</color>
+    <color name="lightishgreen">#4cd964</color>
+    <color name="white75">#f2f2f2</color>
+    <color name="grass">#6eaf27</color>
+    <color name="paleOliveGreen">#a0d468</color>
+    <color name="rouge">#be1e2d</color>
+    <color name="rougeTwo">#c12026</color>
+
+    <color name="dusk">#3f486a</color>
+    <color name="darkishPink">#e75c5e</color>
+    <color name="white_trans75">#ccf2f2f2</color>
+    <color name="dodgerBlue">#4385ff</color>
+
+
+
+
+    //Bouding box
+    <color name="limeBox">#a4c400</color>
+    <color name="greenBox">#60a917</color>
+    <color name="emeraldBox">#008a00</color>
+    <color name="tealBox">#00aba9</color>
+    <color name="cyanBox">#1ba1e2</color>
+    <color name="cobaltBox">#0050ef</color>
+    <color name="indigoBox">#6a00ff</color>
+    <color name="violetBox">#aa00ff</color>
+    <color name="pinkBox">#f472d0</color>
+    <color name="magentaBox">#d80073</color>
+    <color name="crimsonBox">#a20025</color>
+    <color name="redBox">#e51400</color>
+    <color name="orangeBox">#fa6800</color>
+    <color name="amberBox">#f0a30a</color>
+    <color name="yellowBox">#e3c800</color>
+    <color name="browBox">#825a2c</color>
+    <color name="oliveBox">#6d8764</color>
+    <color name="steelBox">#647687</color>
+    <color name="mauveBox">#76608a</color>
+    <color name="siennaBox">#a0522d</color>
+    <color name="blueBox">#0E65D7</color>
+    <color name="greyd3">#d3d3d3</color>
+    <color name="greyd5">#d5d5d5</color>
+    <color name="brownishGrey">#606060</color>
+
+
+
+
+    <color name="whiteMelonPlus">#b3ffffff</color>
+    <color name="beige">#f0d3d3</color>
+    <color name="greyishBrown">#515151</color>
+    <color name="lightishGreen">#4cd964</color>
+    <color name="gayWhite">#f7f7f7</color>
+    <color name="fadedPink">#f0ddde</color>
+    <color name="whitePrediction">#f3f3f3</color>
+    <color name="whiteBar">#e3e3e3</color>
+    <color name="reselect">#d9d9d9</color>
+    <color name="blackButtonGuess">#1d1d1d</color>
+    <color name="grayLine">#d0d0d0</color>
+    <color name="grayAllFood">#777777</color>
+    <color name="grayTime">#6d7278</color>
+    <color name="black50">#80000000</color>
+    <color name="blackGoiYText">#424141</color>
+
+    <color name="whiteTen">#f1f1f1</color>
+    <color name="whiteSix">#d5d5d5</color>
+    <color name="silver">#c5cbd4</color>
+    <color name="blueyGreyTwo">#a3aebc</color>
+
+    <color name="whiteEleven">#f0f0f0</color>
+
+    <color name="waterBlue">#0e65d7</color>
+    <color name="azure">#0091ff</color>
+    <color name="whiteTwelve">#dddddd</color>
+    <color name="warmGrey">#727272</color>
+    <color name="whiteThirteen">#d8d8d8</color>
+    <color name="whiteFourteen">#f4ebeb</color>
+    <color name="paleSkyBlue">#c6e6ff</color>
+    <color name="iceBlue">#eaf6ff</color>
+    <color name="whiteFifteen">#ececec</color>
+
+    <color name="transparent_black">#8C000000</color>
+    <color name="brightOrange">#fa6400</color>
+    <color name="pinkishGrey">#d1d1d1</color>
+    <color name="whiteSixteen">#eeeeee</color>
+
+    <color name="blackDoder">#d2d2d2</color>
+    <color name="whiteSeventeen">#f3f3f3</color>
+
+    <color name="text_selected">#b0003a</color>
+    <color name="text_focused">#E91E63</color>
+    <color name="text_default">#F8BBD0</color>
+    <color name="text_hint_default">#BDBDBD</color>
+    <color name="line_selected">#E91E63</color>
+    <color name="line_focused">#3F51B5</color>
+    <color name="line_default">#C5CAE9</color>
 </resources>

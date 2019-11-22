@@ -9,7 +9,7 @@
         android:roundIcon="@drawable/ic_book_black_24dp"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Dangnhap">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -61,6 +61,7 @@
         <activity android:name=".addttt"></activity>
         <activity android:name=".Thongtinttt"></activity>
         <activity android:name=".Updatettt"></activity>
+        <activity android:name=".Dangnhap"></activity>
     </application>
 
 </manifest>
