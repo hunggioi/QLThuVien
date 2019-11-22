@@ -23,13 +23,14 @@ import com.google.firebase.auth.FirebaseAuth;
 
 import net.yslibrary.android.keyboardvisibilityevent.KeyboardVisibilityEvent;
 import net.yslibrary.android.keyboardvisibilityevent.KeyboardVisibilityEventListener;
+import net.yslibrary.android.keyboardvisibilityevent.util.UIUtil;
 
 public class Dangnhap extends AppCompatActivity {
     EditText edtuser,edtpass;
     Button btndangnhap,btndangki;
     private FirebaseAuth mAthu;
     private ScrollView scroll;
-    private LinearLayout toogle;
+    private LinearLayout toogle,btnBack;
     boolean flagToogle = false;
     ImageView toogleEye,banner_hatto;
 
@@ -96,6 +97,12 @@ public class Dangnhap extends AppCompatActivity {
                 }
             }
         });
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Dangnhap.this.onBackPressed();
+            }
+        });
 
 
     }
@@ -128,6 +135,7 @@ private void dangnhapht()
         toogle = this.<LinearLayout>findViewById(R.id.toogle);
         toogleEye = this.<ImageView>findViewById(R.id.toogle_eye);
         scroll = findViewById(R.id.scroll);
+        btnBack = findViewById(R.id.btnBack);
     }
 
 }

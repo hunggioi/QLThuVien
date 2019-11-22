@@ -62,12 +62,12 @@ public class Chontheloai extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        imgthoatshow.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Chontheloai.this.onBackPressed();
-            }
-        });
+//        imgthoatshow.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Chontheloai.this.onBackPressed();
+//            }
+//        });
     }
 
     private void addcontrols() {
@@ -77,6 +77,6 @@ public class Chontheloai extends AppCompatActivity {
         imgnttc= this.<ImageView>findViewById(R.id.imgnttc);
         imgttt= this.<ImageView>findViewById(R.id.imgttt);
         imgvhnt= this.<ImageView>findViewById(R.id.imgvhnt);
-        imgthoatshow= this.<ImageView>findViewById(R.id.imgthoatshow);
+       // imgthoatshow= this.<ImageView>findViewById(R.id.imgthoatshow);
     }
 }

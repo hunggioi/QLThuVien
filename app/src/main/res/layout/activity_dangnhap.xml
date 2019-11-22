@@ -7,11 +7,17 @@
     android:orientation="vertical"
     android:gravity="center"
     tools:context=".Dangnhap">
-    <include
-        layout="@layout/tool_bar_login"
+    <LinearLayout
+        android:id="@+id/btnBack"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
+        android:layout_height="wrap_content">
+        <include
+            layout="@layout/tool_bar_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+
     <ScrollView
         android:id="@+id/scroll"
         android:layout_width="match_parent"
@@ -143,11 +149,12 @@
             </LinearLayout>
 
             <LinearLayout
+                android:layout_gravity="center"
                 android:layout_marginTop="30dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:orientation="horizontal">
 
                 <Button

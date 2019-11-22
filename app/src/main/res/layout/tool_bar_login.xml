@@ -23,7 +23,7 @@
                     android:layout_marginStart="15dp"
                     android:layout_width="10dp"
                     android:layout_height="18dp"
-                    android:src="@drawable/ic_back"/>
+                    android:src="@drawable/ic_back_white" />
             </LinearLayout>
             <TextView
                 android:id="@+id/text_title"
@@ -32,7 +32,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Đăng nhập"
-                android:textColor="@color/trang"
+                android:textColor="@color/white"
                 android:textSize="19sp"
                 android:fontFamily="@font/roboto_medium"/>
         </RelativeLayout>
