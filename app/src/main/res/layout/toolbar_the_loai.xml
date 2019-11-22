@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/xanhduong"
+        app:popupTheme="@style/AppTheme.NoActionBar">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical">
+            <LinearLayout
+                android:id="@+id/btn_back"
+                android:gravity="center_vertical"
+                android:layout_width="50dp"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_marginStart="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_nav_menu" />
+            </LinearLayout>
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:id="@+id/text_title"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thư Viện"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:fontFamily="@font/roboto_medium"/>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>
