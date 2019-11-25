@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context=".Dangki">
+    tools:context=".account.Dangki">
 
     <LinearLayout
         android:id="@+id/btnBack"
