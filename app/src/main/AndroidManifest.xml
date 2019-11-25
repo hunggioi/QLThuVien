@@ -40,12 +40,13 @@
                     android:host="github.com" />
             </intent-filter>
         </activity>
-        <activity android:name=".Showkhkt"></activity>
+        <activity android:name=".showInfor.Showkhkt"></activity>
         <activity android:name=".Dangki"></activity>
-        <activity android:name=".Addsachkhkt"></activity>
-        <activity android:name=".Thongtinkhkt"></activity>
-        <activity android:name=".Updatekhkt"></activity>
+        <activity android:name=".addBook.Addsachkhkt"></activity>
+        <activity android:name=".information.Thongtinkhkt"></activity>
+        <activity android:name=".update.Updatekhkt"></activity>
         <activity android:name=".Chontheloai"></activity>
+<<<<<<< HEAD
         <activity android:name=".Showcntt"></activity>
         <activity android:name=".addsachcntt"></activity>
         <activity android:name=".Thongtincntt"></activity>
@@ -68,6 +69,32 @@
         <activity android:name=".Updatettt"></activity>
         <activity android:name=".Dangnhap"></activity>
         <activity android:name=".MainActivity"></activity>
+=======
+        <activity android:name=".showInfor.Showcntt"></activity>
+        <activity android:name=".addBook.addsachcntt"></activity>
+        <activity android:name=".information.Thongtincntt"></activity>
+        <activity android:name=".update.Updatecntt"></activity>
+        <activity android:name=".showInfor.Shownttc"></activity>
+        <activity android:name=".update.Updatenttc"></activity>
+        <activity android:name=".information.Thongtinnttc"></activity>
+        <activity android:name=".addBook.addnttc"></activity>
+        <activity android:name=".showInfor.Showgt"></activity>
+        <activity android:name=".addBook.addgt"></activity>
+        <activity android:name=".information.Thongtingt"></activity>
+        <activity android:name=".update.Updategt"></activity>
+        <activity android:name=".showInfor.Showvhnt"></activity>
+        <activity android:name=".addBook.addvhnt"></activity>
+        <activity android:name=".information.Thongtinvhnt"></activity>
+        <activity android:name=".update.Updatevhnt"></activity>
+        <activity android:name=".showInfor.Showttt"></activity>
+        <activity android:name=".addBook.addttt"></activity>
+
+        <activity android:name=".information.Thongtinttt"></activity>
+        <activity android:name=".update.Updatettt"></activity>
+        <activity android:name=".Dangnhap"></activity>
+        <activity android:name=".MainActivity"></activity>
+
+>>>>>>> tins
     </application>
 
 </manifest>

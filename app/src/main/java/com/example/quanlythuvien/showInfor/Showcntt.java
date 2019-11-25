@@ -1,4 +1,4 @@
-package com.example.quanlythuvien;
+package com.example.quanlythuvien.showInfor;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -9,6 +9,11 @@ import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.example.quanlythuvien.Book;
+import com.example.quanlythuvien.R;
+import com.example.quanlythuvien.adapter_sach;
+import com.example.quanlythuvien.addBook.addsachcntt;
+import com.example.quanlythuvien.information.Thongtincntt;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -18,7 +23,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class Showvhnt extends Activity {
+public class Showcntt extends Activity {
     GridView grvsach;
     ImageButton btnthem,btnthoatkhkt;
     ArrayList<Book>sachArrayList;
@@ -26,14 +31,14 @@ public class Showvhnt extends Activity {
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.showvhnt);
+        setContentView(R.layout.showcntt);
         addcontrols();
         addevent();
         sachArrayList = new ArrayList<>();
-        final adapter_sach quyensachadapter=new adapter_sach(Showvhnt.this,R.layout.activity_sach,sachArrayList);
+        final adapter_sach quyensachadapter=new adapter_sach(Showcntt.this,R.layout.activity_sach,sachArrayList);
         grvsach.setAdapter(quyensachadapter);
         mta= FirebaseDatabase.getInstance().getReference();
-        mta.child("VAN HOC NGHE THUAT").addValueEventListener(new ValueEventListener() {
+        mta.child("CONG NGHE THONG TIN").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 sachArrayList.clear();
@@ -55,13 +60,13 @@ public class Showvhnt extends Activity {
         btnthoatkhkt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Showvhnt.this.onBackPressed();
+                Showcntt.this.onBackPressed();
             }
         });
         btnthem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(Showvhnt.this,addvhnt.class);
+                Intent intent=new Intent(Showcntt.this, addsachcntt.class);
                 startActivity(intent);
 
             }
@@ -69,7 +74,7 @@ public class Showvhnt extends Activity {
         grvsach.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent=new Intent(Showvhnt.this, Thongtinvhnt.class);
+                Intent intent=new Intent(Showcntt.this, Thongtincntt.class);
                 Bundle ten=new Bundle();
                 ten.putSerializable("khaucntt",sachArrayList.get(position));
                 intent.putExtra("ahihicntt",ten);
@@ -79,7 +84,7 @@ public class Showvhnt extends Activity {
         grvsach.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-                final DatabaseReference mta = FirebaseDatabase.getInstance().getReference("VAN HOC NGHE THUAT");
+                final DatabaseReference mta = FirebaseDatabase.getInstance().getReference("CONG NGHE THONG TIN");
                 final Query query = mta.orderByChild("id").equalTo(sachArrayList.get(position).getId());
                 query.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
@@ -90,13 +95,13 @@ public class Showvhnt extends Activity {
                                 String postkey = child.getRef().getKey();
                                 mta.child(postkey).removeValue();
                             }
-                            Toast.makeText(Showvhnt.this, "Xóa thành công !", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Showcntt.this, "Xóa thành công !", Toast.LENGTH_SHORT).show();
                         }
                     }
 
                     @Override
                     public void onCancelled(DatabaseError databaseError) {
-                        Toast.makeText(Showvhnt.this, "Lỗi không thể xóa!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Showcntt.this, "Lỗi không thể xóa!", Toast.LENGTH_SHORT).show();
                     }
                 });
                 return false;

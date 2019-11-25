@@ -8,12 +8,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.quanlythuvien.R;
+
 public class ThuVienFragMent extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(new)
+        View view = inflater.inflate(R.layout.thuvien_fragment,container,false);
 
         return view;
     }

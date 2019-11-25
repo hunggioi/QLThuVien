@@ -1,4 +1,4 @@
-package com.example.quanlythuvien;
+package com.example.quanlythuvien.update;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +9,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.quanlythuvien.Book;
+import com.example.quanlythuvien.R;
+import com.example.quanlythuvien.showInfor.Showvhnt;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -16,28 +19,28 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
-public class Updatecntt extends AppCompatActivity {
+public class Updatevhnt extends AppCompatActivity {
     EditText edtmasachup,edttensachup,edttacgiaup,edtnxbup,edtsotrangup;
     Button btnupdate,btnthoatup;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.updatecntt);
+        setContentView(R.layout.updatevhnt);
         addcontrols();
         loaddata();
         btnupdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 update();
-                Updatecntt.this.onBackPressed();
-                Intent intent=new Intent(Updatecntt.this, Showcntt.class);
+                Updatevhnt.this.onBackPressed();
+                Intent intent=new Intent(Updatevhnt.this, Showvhnt.class);
                 startActivity(intent);
             }
         });
         btnthoatup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Updatecntt.this.onBackPressed();
+                Updatevhnt.this.onBackPressed();
             }
         });
     }
@@ -59,7 +62,7 @@ public class Updatecntt extends AppCompatActivity {
         final String ncb=edtnxbup.getText().toString();
         final int sotrang=Integer.parseInt(edtsotrangup.getText().toString());
         Book clsbook=new Book(ma,ten,tacgia,ncb,sotrang);
-        final DatabaseReference mta = FirebaseDatabase.getInstance().getReference("CONG NGHE THONG TIN");
+        final DatabaseReference mta = FirebaseDatabase.getInstance().getReference("VAN HOC NGHE THUAT");
         final Query query = mta.orderByChild("id").equalTo(clsbook.getId());
         query.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -73,13 +76,13 @@ public class Updatecntt extends AppCompatActivity {
                         mta.child(postkey).child("sotrang").setValue(sotrang);
                         mta.child(postkey).child("nxb").setValue(ncb);
                     }
-                    Toast.makeText(Updatecntt.this, "Cập nhật thành công !", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Updatevhnt.this, "Cập nhật thành công !", Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-                Toast.makeText(Updatecntt.this, "Lỗi cập nhật !", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Updatevhnt.this, "Lỗi cập nhật !", Toast.LENGTH_SHORT).show();
             }
         });
     }

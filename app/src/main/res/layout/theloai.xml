@@ -22,7 +22,10 @@
                 android:layout_height="wrap_content"
                 />
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> tins
         </LinearLayout>
         <ImageView
             android:id="@+id/imgkhkt"

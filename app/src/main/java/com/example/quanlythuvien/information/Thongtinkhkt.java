@@ -1,4 +1,4 @@
-package com.example.quanlythuvien;
+package com.example.quanlythuvien.information;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,44 +8,48 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class Thongtinvhnt extends AppCompatActivity {
+import com.example.quanlythuvien.Book;
+import com.example.quanlythuvien.R;
+import com.example.quanlythuvien.update.Updatekhkt;
+
+public class Thongtinkhkt extends AppCompatActivity {
     EditText edtmasachtt,edttacgiatt,edttensachtt,edtnxbtt,edtsotrangtt;
     Button btnthoattt,btncapnhat;
     private Book sach;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.thongtinvhnt);
+        setContentView(R.layout.thongtinkhkt);
         addcontrols();
         addevent();
         loaddata();
     }
     private void loaddata()
     {
-        Bundle ten=getIntent().getBundleExtra("ahihicntt");
-        sach =(Book) ten.getSerializable("khaucntt");
-        edtmasachtt.setText(sach.getId());
-        edttensachtt.setText(sach.getTensach());
-        edttacgiatt.setText(sach.getTacgia());
-        edtnxbtt.setText(sach.getNxb());
-        edtsotrangtt.setText(""+sach.getSotrang());
+        Bundle ten=getIntent().getBundleExtra("ahihi");
+       sach =(Book) ten.getSerializable("khau");
+       edtmasachtt.setText(sach.getId());
+       edttensachtt.setText(sach.getTensach());
+       edttacgiatt.setText(sach.getTacgia());
+       edtnxbtt.setText(sach.getNxb());
+       edtsotrangtt.setText(""+sach.getSotrang());
 
     }
     private void addevent() {
         btncapnhat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(Thongtinvhnt.this, Updatevhnt.class);
+                Intent intent=new Intent(Thongtinkhkt.this, Updatekhkt.class);
                 Bundle load = new Bundle();
-                load.putSerializable("keycntt", sach);
-                intent.putExtra("ahihicntt",load);
+                load.putSerializable("key", sach);
+                intent.putExtra("ahihi",load);
                 startActivity(intent);
             }
         });
         btnthoattt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Thongtinvhnt.this.onBackPressed();
+                Thongtinkhkt.this.onBackPressed();
             }
         });
     }

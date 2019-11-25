@@ -95,6 +95,7 @@ public class Dangnhap extends AppCompatActivity {
                     edtpass.setSelection(edtpass.getText().length());
 
                 }
+<<<<<<< HEAD
             }
         });
         btnBack.setOnClickListener(new View.OnClickListener() {
@@ -103,6 +104,16 @@ public class Dangnhap extends AppCompatActivity {
                 Dangnhap.this.onBackPressed();
             }
         });
+=======
+            }
+        });
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Dangnhap.this.onBackPressed();
+            }
+        });
+>>>>>>> tins
 
 
     }
@@ -122,8 +133,6 @@ private void dangnhapht()
                     } else {
                         Toast.makeText(Dangnhap.this,"User hoặc password sai!",Toast.LENGTH_SHORT).show();
                     }
-
-
                 }
             });
 }

@@ -1,4 +1,4 @@
-package com.example.quanlythuvien;
+package com.example.quanlythuvien.addBook;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,11 +10,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.quanlythuvien.Book;
+import com.example.quanlythuvien.R;
+import com.example.quanlythuvien.showInfor.Shownttc;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class addvhnt extends AppCompatActivity {
+public class addnttc extends AppCompatActivity {
     EditText edtmasacch,edttensach,edttacgia,edtnxb,edtsotrang;
     Button btnthemsach,btnthoatthem;
     private DatabaseReference mta;
@@ -22,7 +25,7 @@ public class addvhnt extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.themvhnt);
+        setContentView(R.layout.themnttc);
         addcontrols();
         addevent();
         mta= FirebaseDatabase.getInstance().getReference();
@@ -33,7 +36,7 @@ public class addvhnt extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Luu();
-                Intent intent=new Intent(addvhnt.this, Showvhnt.class);
+                Intent intent=new Intent(addnttc.this, Shownttc.class);
                 startActivity(intent);
             }
         });
@@ -51,14 +54,14 @@ public class addvhnt extends AppCompatActivity {
         String nxb=edtnxb.getText().toString();
         int sotrang=Integer.parseInt(edtsotrang.getText().toString());
         Book clsSach=new Book(ma,ten,tacgia,nxb,sotrang);
-        mta.child("VAN HOC NGHE THUAT").push().setValue(clsSach, new DatabaseReference.CompletionListener() {
+        mta.child("NGON TINH TINH CAM").push().setValue(clsSach, new DatabaseReference.CompletionListener() {
             @Override
             public void onComplete(@Nullable DatabaseError databaseError, @NonNull DatabaseReference databaseReference) {
                 if(databaseError ==null){
-                    Toast.makeText(addvhnt.this, "Thêm thành công !", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(addnttc.this, "Thêm thành công !", Toast.LENGTH_SHORT).show();
                 }
                 else{
-                    Toast.makeText(addvhnt.this, "Thêm thất bại !", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(addnttc.this, "Thêm thất bại !", Toast.LENGTH_SHORT).show();
                 }
             }
         });
