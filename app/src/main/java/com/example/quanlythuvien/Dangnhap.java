@@ -1,5 +1,6 @@
-package com.example.quanlythuvien.account;
+package com.example.quanlythuvien;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -15,8 +16,6 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.Toast;
 
-import com.example.quanlythuvien.Chontheloai;
-import com.example.quanlythuvien.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -123,8 +122,6 @@ private void dangnhapht()
                     } else {
                         Toast.makeText(Dangnhap.this,"User hoặc password sai!",Toast.LENGTH_SHORT).show();
                     }
-
-
                 }
             });
 }

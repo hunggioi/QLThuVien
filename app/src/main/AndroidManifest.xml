@@ -41,7 +41,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".showInfor.Showkhkt"></activity>
-        <activity android:name=".account.Dangki"></activity>
+        <activity android:name=".Dangki"></activity>
         <activity android:name=".addBook.Addsachkhkt"></activity>
         <activity android:name=".information.Thongtinkhkt"></activity>
         <activity android:name=".update.Updatekhkt"></activity>
@@ -67,7 +67,7 @@
 
         <activity android:name=".information.Thongtinttt"></activity>
         <activity android:name=".update.Updatettt"></activity>
-        <activity android:name=".account.Dangnhap"></activity>
+        <activity android:name=".Dangnhap"></activity>
         <activity android:name=".MainActivity"></activity>
 
     </application>
