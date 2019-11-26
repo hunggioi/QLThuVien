@@ -46,30 +46,6 @@
         <activity android:name=".information.Thongtinkhkt"></activity>
         <activity android:name=".update.Updatekhkt"></activity>
         <activity android:name=".Chontheloai"></activity>
-<<<<<<< HEAD
-        <activity android:name=".Showcntt"></activity>
-        <activity android:name=".addsachcntt"></activity>
-        <activity android:name=".Thongtincntt"></activity>
-        <activity android:name=".Updatecntt"></activity>
-        <activity android:name=".Shownttc"></activity>
-        <activity android:name=".Updatenttc"></activity>
-        <activity android:name=".Thongtinnttc"></activity>
-        <activity android:name=".addnttc"></activity>
-        <activity android:name=".Showgt"></activity>
-        <activity android:name=".addgt"></activity>
-        <activity android:name=".Thongtingt"></activity>
-        <activity android:name=".Updategt"></activity>
-        <activity android:name=".Showvhnt"></activity>
-        <activity android:name=".addvhnt"></activity>
-        <activity android:name=".Thongtinvhnt"></activity>
-        <activity android:name=".Updatevhnt"></activity>
-        <activity android:name=".Showttt"></activity>
-        <activity android:name=".addttt"></activity>
-        <activity android:name=".Thongtinttt"></activity>
-        <activity android:name=".Updatettt"></activity>
-        <activity android:name=".Dangnhap"></activity>
-        <activity android:name=".MainActivity"></activity>
-=======
         <activity android:name=".showInfor.Showcntt"></activity>
         <activity android:name=".addBook.addsachcntt"></activity>
         <activity android:name=".information.Thongtincntt"></activity>
@@ -93,8 +69,9 @@
         <activity android:name=".update.Updatettt"></activity>
         <activity android:name=".Dangnhap"></activity>
         <activity android:name=".MainActivity"></activity>
+        <activity android:name=".Fragment.ThuVienFragMent"></activity>
 
->>>>>>> tins
+
     </application>
 
 </manifest>
