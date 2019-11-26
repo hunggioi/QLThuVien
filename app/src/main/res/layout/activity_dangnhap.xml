@@ -8,7 +8,6 @@
     android:orientation="vertical"
     android:gravity="center"
     tools:context=".Dangnhap">
-
     <LinearLayout
         android:id="@+id/btnBack"
         android:layout_width="match_parent"
@@ -184,4 +183,9 @@
         </LinearLayout>
 
     </ScrollView>
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> tins
 </LinearLayout>

@@ -95,6 +95,7 @@ public class Dangnhap extends AppCompatActivity {
                     edtpass.setSelection(edtpass.getText().length());
 
                 }
+
             }
         });
         btnBack.setOnClickListener(new View.OnClickListener() {
