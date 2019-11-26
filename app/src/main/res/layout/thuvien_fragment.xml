@@ -25,30 +25,48 @@
         <android.support.design.widget.TabLayout
             android:id="@+id/tab_layout"
             android:layout_width="match_parent"
-            android:layout_height="32dp"
-            android:layout_marginLeft="@dimen/margin_small"
-            android:layout_marginTop="15dp"
-            android:layout_marginRight="@dimen/margin_small"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padding_5dp"
             android:background="@drawable/bg_border_radius_white_twelve"
+            app:tabMode="scrollable"
             android:orientation="horizontal">
 
             <android.support.design.widget.TabItem
-                android:id="@+id/btn_cntt"
+                android:id="@+id/btn_congnghethongtin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Monday" />
 
             <android.support.design.widget.TabItem
-                android:id="@+id/btn_khkt"
+                android:id="@+id/btn_khoahockithuat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Tuesday" />
 
             <android.support.design.widget.TabItem
-                android:id="@+id/btn_gdxh"
+                android:id="@+id/btn_giaoducvadoisong"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Wednesday" />
+
+            <android.support.design.widget.TabItem
+                android:id="@+id/btn_phapluatcuocsong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thurday" />
+
+            <android.support.design.widget.TabItem
+                android:id="@+id/btn_chinhtrivakinhte"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Friday" />
+
+            <android.support.design.widget.TabItem
+                android:id="@+id/btn_giaitri"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Satuday" />
+
         </android.support.design.widget.TabLayout>
 
         <LinearLayout
