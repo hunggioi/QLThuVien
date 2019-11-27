@@ -28,8 +28,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/padding_5dp"
             android:background="@drawable/bg_border_radius_white_twelve"
-            app:tabMode="scrollable"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            app:tabMode="scrollable">
 
             <android.support.design.widget.TabItem
                 android:id="@+id/btn_congnghethongtin"
