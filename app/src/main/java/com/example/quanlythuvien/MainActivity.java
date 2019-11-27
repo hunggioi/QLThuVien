@@ -8,6 +8,10 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.example.quanlythuvien.Fragment.ThuVienFragMent;
+import com.example.quanlythuvien.account.Dangki;
+import com.example.quanlythuvien.account.Dangnhap;
+
 public class MainActivity extends AppCompatActivity {
     private TextView dangnhap;
     private TextView thoat;
@@ -25,7 +29,8 @@ public class MainActivity extends AppCompatActivity {
         dangnhap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,Dangnhap.class);
+                Intent intent = new Intent(MainActivity.this, ThuVienFragMent.class);
+
                 getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.enter, R.anim.exit,
                         R.anim.left_to_right, R.anim.right_to_left);
                 startActivity(intent);
@@ -43,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(MainActivity.this,Dangki.class);
+                Intent intent = new Intent(MainActivity.this, Dangki.class);
                 getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.enter, R.anim.exit,
                         R.anim.right_to_left, R.anim.left_to_right);
                 startActivity(intent);
