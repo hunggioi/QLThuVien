@@ -8,9 +8,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.quanlythuvien.Book;
+import com.example.quanlythuvien.Fragment.CNTTFragMent;
+import com.example.quanlythuvien.Fragment.ThuVienFragMent;
 import com.example.quanlythuvien.R;
 import com.example.quanlythuvien.showInfor.Showcntt;
 import com.google.firebase.database.DatabaseError;
@@ -18,9 +22,11 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class addsachcntt extends AppCompatActivity {
-    EditText edtmasacch,edttensach,edttacgia,edtnxb,edtsotrang;
-    Button btnthemsach,btnthoatthem;
+    private EditText edtmasacch,edttensach,edttacgia,edtnxb,edtsotrang;
+    private Button btnthemsach,btnthoatthem;
     private DatabaseReference mta;
+    private TextView text_title;
+    private LinearLayout btn_back;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -29,6 +35,7 @@ public class addsachcntt extends AppCompatActivity {
         addcontrols();
         addevent();
         mta= FirebaseDatabase.getInstance().getReference();
+        text_title.setText("Thêm sách");
     }
 
     private void addevent() {
@@ -36,11 +43,14 @@ public class addsachcntt extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Luu();
-                Intent intent=new Intent(addsachcntt.this, Showcntt.class);
-                startActivity(intent);
+//                Intent intent=new Intent(addsachcntt.this, CNTTFragMent.class);
+//                startActivity(intent);
+                ThuVienFragMent nexfrag = new ThuVienFragMent();
+                getSupportFragmentManager().beginTransaction().commit();
+                finish();
             }
         });
-        btnthoatthem.setOnClickListener(new View.OnClickListener() {
+        btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
@@ -73,7 +83,8 @@ public class addsachcntt extends AppCompatActivity {
         edtnxb= this.<EditText>findViewById(R.id.edtnxb);
         edtsotrang= this.<EditText>findViewById(R.id.edtsotrang);
         btnthemsach= this.<Button>findViewById(R.id.btnthemsach);
-        btnthoatthem= this.<Button>findViewById(R.id.btnthoatthem);
+        btn_back= findViewById(R.id.btn_back);
+        text_title = findViewById(R.id.text_title);
     }
 }
 

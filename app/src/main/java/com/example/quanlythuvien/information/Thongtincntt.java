@@ -7,6 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.example.quanlythuvien.Book;
 import com.example.quanlythuvien.R;
@@ -14,8 +16,10 @@ import com.example.quanlythuvien.update.Updatecntt;
 
 public class Thongtincntt extends AppCompatActivity {
     EditText edtmasachtt,edttacgiatt,edttensachtt,edtnxbtt,edtsotrangtt;
-    Button btnthoattt,btncapnhat;
+    Button btncapnhat;
     private Book sach;
+    private LinearLayout btnBack;
+    private TextView txt_toolbar;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,7 +31,7 @@ public class Thongtincntt extends AppCompatActivity {
     private void loaddata()
     {
         Bundle ten=getIntent().getBundleExtra("ahihicntt");
-        sach =(Book) ten.getSerializable("khaucntt");
+        sach =(Book) ten.getSerializable("gioicntt");
         edtmasachtt.setText(sach.getId());
         edttensachtt.setText(sach.getTensach());
         edttacgiatt.setText(sach.getTacgia());
@@ -46,13 +50,15 @@ public class Thongtincntt extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        btnthoattt.setOnClickListener(new View.OnClickListener() {
+        btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Thongtincntt.this.onBackPressed();
             }
         });
-    }
+
+        txt_toolbar.setText("Chi tiết sách");
+ }
 
     private void addcontrols() {
         edtmasachtt= this.<EditText>findViewById(R.id.edtmasachtt);
@@ -60,7 +66,8 @@ public class Thongtincntt extends AppCompatActivity {
         edttacgiatt= this.<EditText>findViewById(R.id.edttacgiatt);
         edtnxbtt= this.<EditText>findViewById(R.id.edtnxbtt);
         edtsotrangtt= this.<EditText>findViewById(R.id.edtsotrangtt);
-        btnthoattt= this.<Button>findViewById(R.id.btnthoattt);
+        btnBack= findViewById(R.id.btnBack);
         btncapnhat= this.<Button>findViewById(R.id.btncapnhat);
+        txt_toolbar = findViewById(R.id.text_title);
     }
 }
