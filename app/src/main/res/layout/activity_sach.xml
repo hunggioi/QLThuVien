@@ -4,11 +4,14 @@
     android:layout_height="120dp"
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_marginTop="10dp"
+    android:layout_marginTop="20dp"
     android:paddingStart="15dp"
     android:paddingTop="9dp"
-    android:background="@drawable/cr4"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:background="@drawable/corner_box_blue"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:layout_marginLeft="@dimen/padding_15dp"
+    android:layout_marginRight="@dimen/padding_15dp">
 
     <ImageView
         app:layout_constraintTop_toTopOf="parent"
@@ -17,7 +20,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:src="@drawable/ic_bookmark_border_black_24dp"
-        android:tint="#519940"
+        android:tint="@color/trang"
         tools:layout_editor_absoluteY="7dp" />
 
     <TextView
@@ -27,7 +30,7 @@
         android:paddingStart="5dp"
         android:singleLine="true"
         android:text="Name"
-        android:textColor="#000"
+        android:textColor="@color/trang"
         app:layout_constraintTop_toTopOf="@id/iconx"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/iconx"
@@ -40,7 +43,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:src="@drawable/ic_vpn_key_black_24dp"
-        android:tint="#519940"/>
+        android:tint="@color/trang"/>
     <TextView
         android:id="@+id/txtma"
         android:layout_width="0dp"
@@ -51,7 +54,7 @@
         app:layout_constraintStart_toEndOf="@id/icony"
         app:layout_constraintBottom_toBottomOf="@id/icony"
         android:text="12345"
-        android:textColor="#000"
+        android:textColor="@color/trang"
         android:paddingStart="5dp"
         />
     <ImageView
@@ -62,7 +65,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:src="@drawable/ic_person_black_24dp"
-        android:tint="#519940"/>
+        android:tint="@color/trang"/>
     <TextView
         android:id="@+id/txttacgia"
         android:layout_width="0dp"
@@ -73,7 +76,7 @@
         app:layout_constraintStart_toEndOf="@id/iconz"
         app:layout_constraintBottom_toBottomOf="@id/iconz"
         android:text="ahihi"
-        android:textColor="#000"
+        android:textColor="@color/trang"
         android:paddingStart="5dp"
         />
 </android.support.constraint.ConstraintLayout>

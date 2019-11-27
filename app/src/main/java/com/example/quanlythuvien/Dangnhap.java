@@ -119,6 +119,7 @@ private void dangnhapht()
                         Toast.makeText(Dangnhap.this,"Đăng nhập thành công!",Toast.LENGTH_SHORT).show();
                         Intent intent=new Intent(Dangnhap.this, ThuVienFragMent.class);
                         startActivity(intent);
+                        finish();
 
                     } else {
                         Toast.makeText(Dangnhap.this,"User hoặc password sai!",Toast.LENGTH_SHORT).show();

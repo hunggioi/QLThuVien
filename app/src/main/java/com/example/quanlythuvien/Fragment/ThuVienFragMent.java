@@ -66,7 +66,7 @@ private class PageAdapter extends FragmentPagerAdapter {
             public CharSequence getPageTitle(int i){
                 switch (i) {
                     case 0:
-                        return "Công Nghệ TT";
+                        return "CNTT";
                     case 1:
                         return "Khoa Học KT";
                     default:
