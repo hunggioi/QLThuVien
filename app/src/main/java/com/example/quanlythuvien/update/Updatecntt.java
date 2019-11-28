@@ -7,10 +7,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.quanlythuvien.Book;
+import com.example.quanlythuvien.Fragment.CNTTFragMent;
 import com.example.quanlythuvien.R;
+import com.example.quanlythuvien.information.Thongtincntt;
 import com.example.quanlythuvien.showInfor.Showcntt;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -21,23 +25,29 @@ import com.google.firebase.database.ValueEventListener;
 
 public class Updatecntt extends AppCompatActivity {
     EditText edtmasachup,edttensachup,edttacgiaup,edtnxbup,edtsotrangup;
-    Button btnupdate,btnthoatup;
+    Button btnupdate;
+    private LinearLayout btnback;
+    private TextView txt_toolbar;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.updatecntt);
         addcontrols();
         loaddata();
+
+        txt_toolbar.setText("Chỉnh sửa sách");
         btnupdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 update();
                 Updatecntt.this.onBackPressed();
-                Intent intent=new Intent(Updatecntt.this, Showcntt.class);
-                startActivity(intent);
+                CNTTFragMent nextfrag = new CNTTFragMent();
+                getSupportFragmentManager().beginTransaction().commit();
+//                Intent intent=new Intent(Updatecntt.this, Showcntt.class);
+//                startActivity(intent);
             }
         });
-        btnthoatup.setOnClickListener(new View.OnClickListener() {
+        btnback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Updatecntt.this.onBackPressed();
@@ -95,6 +105,7 @@ public class Updatecntt extends AppCompatActivity {
         edtnxbup= this.<EditText>findViewById(R.id.edtnxbup);
         edtsotrangup= this.<EditText>findViewById(R.id.edtsotrangup);
         btnupdate= this.<Button>findViewById(R.id.btnupdate);
-        btnthoatup= this.<Button>findViewById(R.id.btnthoatup);
+        btnback = findViewById(R.id.btnBack);
+        txt_toolbar = findViewById(R.id.text_title);
     }
 }

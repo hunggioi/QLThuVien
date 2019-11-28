@@ -10,6 +10,7 @@
     tools:context=".account.Dangki">
 
     <LinearLayout
+        android:foreground="?android:attr/selectableItemBackground"
         android:id="@+id/btnBack"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -171,6 +172,7 @@
                 android:orientation="horizontal">
 
                 <Button
+                    android:foreground="?android:attr/selectableItemBackground"
                     android:id="@+id/btndangky"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
