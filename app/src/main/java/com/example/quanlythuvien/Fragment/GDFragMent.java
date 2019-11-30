@@ -15,6 +15,7 @@ public class GDFragMent extends Fragment implements View.OnClickListener {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_gdxh,container,false);
+
         return view;
     }
 
