@@ -20,6 +20,8 @@ import com.example.quanlythuvien.AdapterSach;
 import com.example.quanlythuvien.Book;
 import com.example.quanlythuvien.CNTT.Thongtincntt;
 import com.example.quanlythuvien.CNTT.addsachcntt;
+import com.example.quanlythuvien.GD.AddGd;
+import com.example.quanlythuvien.GD.ThongtinGd;
 import com.example.quanlythuvien.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -49,7 +51,7 @@ public class KHKTFragMent extends Fragment implements View.OnClickListener {
         final AdapterSach quyensachadapter=new AdapterSach(getActivity(),R.layout.activity_sach,sachArrayList);
         grvsach.setAdapter(quyensachadapter);
         mta= FirebaseDatabase.getInstance().getReference();
-        mta.child("KHOA HOC-KI THUAT").addValueEventListener(new ValueEventListener() {
+        mta.child("KHOA HOC KY THUAT").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 sachArrayList.clear();
@@ -74,7 +76,7 @@ public class KHKTFragMent extends Fragment implements View.OnClickListener {
         btnthem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getActivity(), addsachcntt.class);
+                Intent intent = new Intent(getActivity(),Addsachkhkt.class);
                 startActivity(intent);
 
             }
@@ -82,16 +84,37 @@ public class KHKTFragMent extends Fragment implements View.OnClickListener {
         grvsach.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(getActivity(), Thongtincntt.class);
+                Intent intent = new Intent(getActivity(), ThongtinGd.class);
                 Bundle ten = new Bundle();
-                ten.putSerializable("khau",sachArrayList.get(position));
-                intent.putExtra("ahihi",ten);
+                ten.putSerializable("gioikt", sachArrayList.get(position));
+                intent.putExtra("ahihikt", ten);
                 startActivity(intent);
             }
         });
         grvsach.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+//                final DatabaseReference mta = FirebaseDatabase.getInstance().getReference("CONG NGHE THONG TIN");
+//                final Query query = mta.orderByChild("id").equalTo(sachArrayList.get(position).getId());
+//                query.addListenerForSingleValueEvent(new ValueEventListener() {
+//                    @Override
+//                    public void onDataChange(DataSnapshot snapshot) {
+//
+//
+//                        if(snapshot.exists()){
+//                            for (DataSnapshot child: snapshot.getChildren()) {
+//                                String postkey = child.getRef().getKey();
+//                                mta.child(postkey).removeValue();
+//                            }
+//                            Toast.makeText(getActivity(), "Xóa thành công !", Toast.LENGTH_SHORT).show();
+//                        }
+//                    }
+//
+//                    @Override
+//                    public void onCancelled(DatabaseError databaseError) {
+//                        Toast.makeText(getActivity(), "Lỗi không thể xóa!", Toast.LENGTH_SHORT).show();
+//                    }
+//                });
                 showAlertDialog(position);
                 return false;
             }
@@ -105,7 +128,7 @@ public class KHKTFragMent extends Fragment implements View.OnClickListener {
         builder.setPositiveButton("Xoá", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                final DatabaseReference mta = FirebaseDatabase.getInstance().getReference("KHOA HOC-KI THUAT");
+                final DatabaseReference mta = FirebaseDatabase.getInstance().getReference("KHOA HOC KY THUAT");
                 final Query query = mta.orderByChild("id").equalTo(sachArrayList.get(pos).getId());
                 query.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
@@ -140,6 +163,7 @@ public class KHKTFragMent extends Fragment implements View.OnClickListener {
         AlertDialog alertDialog = builder.create();
         alertDialog.show();
     }
+
 
 
     @Override

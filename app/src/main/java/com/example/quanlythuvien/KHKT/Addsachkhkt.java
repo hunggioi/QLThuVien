@@ -20,8 +20,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class Addsachkhkt extends AppCompatActivity {
-    EditText edtmasacch,edttensach,edttacgia,edtnxb,edtsotrang;
-    Button btnthemsach;
+    private EditText edtmasacch,edttensach,edttacgia,edtnxb,edtsotrang;
+    private Button btnthemsach;
     private DatabaseReference mta;
     private TextView text_title;
     private LinearLayout btn_back;
@@ -42,10 +42,9 @@ public class Addsachkhkt extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Luu();
-//                Intent intent=new Intent(Addsachkhkt.this, Showkhkt.class);
-//                startActivity(intent);
-                ThuVienFragMent nexfrag = new ThuVienFragMent();
+                KHKTFragMent nexfrag = new KHKTFragMent();
                 getSupportFragmentManager().beginTransaction().commit();
+                nexfrag.onClick(v);
                 finish();
             }
         });
@@ -63,7 +62,7 @@ public class Addsachkhkt extends AppCompatActivity {
         String nxb=edtnxb.getText().toString();
         int sotrang=Integer.parseInt(edtsotrang.getText().toString());
         Book clsSach=new Book(ma,ten,tacgia,nxb,sotrang);
-        mta.child("KHOA HOC-KI THUAT").push().setValue(clsSach, new DatabaseReference.CompletionListener() {
+        mta.child("KHOA HOC KY THUAT").push().setValue(clsSach, new DatabaseReference.CompletionListener() {
             @Override
             public void onComplete(@Nullable DatabaseError databaseError, @NonNull DatabaseReference databaseReference) {
                 if(databaseError ==null){

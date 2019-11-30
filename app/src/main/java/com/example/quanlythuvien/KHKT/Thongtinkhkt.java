@@ -29,8 +29,8 @@ public class Thongtinkhkt extends AppCompatActivity {
     }
 
     private void loaddata() {
-        Bundle ten=getIntent().getBundleExtra("ahihi");
-        sach =(Book) ten.getSerializable("khau");
+        Bundle ten=getIntent().getBundleExtra("ahihikt");
+        sach =(Book) ten.getSerializable("gioikt");
         edtmasachtt.setText(sach.getId());
         edttensachtt.setText(sach.getTensach());
         edttacgiatt.setText(sach.getTacgia());
@@ -45,8 +45,8 @@ public class Thongtinkhkt extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent=new Intent(Thongtinkhkt.this, Updatekhkt.class);
                 Bundle load = new Bundle();
-                load.putSerializable("key", sach);
-                intent.putExtra("ahihi",load);
+                load.putSerializable("keykt", sach);
+                intent.putExtra("ahihikt",load);
                 startActivity(intent);
             }
         });

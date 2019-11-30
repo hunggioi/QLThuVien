@@ -40,7 +40,6 @@
                     android:host="github.com" />
             </intent-filter>
         </activity>
-        <activity android:name=".KHKT.Showkhkt"></activity>
         <activity android:name=".account.Dangki"></activity>
         <activity android:name=".KHKT.Addsachkhkt"></activity>
         <activity android:name=".KHKT.Thongtinkhkt"></activity>
@@ -54,7 +53,6 @@
         <activity android:name=".Updatenttc"></activity>
         <activity android:name=".Thongtinnttc"></activity>
         <activity android:name=".addnttc"></activity>
-        <activity android:name=".GD.ShowGd"></activity>
         <activity android:name=".GD.AddGd"></activity>
         <activity android:name=".GD.ThongtinGd"></activity>
         <activity android:name=".GD.UpdateGd"></activity>

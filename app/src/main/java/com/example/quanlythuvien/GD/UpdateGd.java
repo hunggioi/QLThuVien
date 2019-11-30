@@ -32,7 +32,7 @@ public class UpdateGd extends AppCompatActivity {
             public void onClick(View v) {
                 update();
                 UpdateGd.this.onBackPressed();
-                Intent intent=new Intent(UpdateGd.this, ShowGd.class);
+                Intent intent=new Intent(UpdateGd.this, GDFragMent.class);
                 startActivity(intent);
             }
         });
@@ -46,8 +46,8 @@ public class UpdateGd extends AppCompatActivity {
 
     private void loaddata()
     {
-        Bundle ten = getIntent().getBundleExtra("ahihicntt");
-        Book sach=(Book) ten.getSerializable("keycntt");
+        Bundle ten = getIntent().getBundleExtra("ahihigd");
+        Book sach=(Book) ten.getSerializable("keygd");
         edtmasachup.setText(sach.getId());
         edttensachup.setText(sach.getTensach());
         edttacgiaup.setText(sach.getTacgia());

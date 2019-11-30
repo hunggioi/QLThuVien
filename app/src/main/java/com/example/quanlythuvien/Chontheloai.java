@@ -8,8 +8,8 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.example.quanlythuvien.CNTT.Showcntt;
-import com.example.quanlythuvien.GD.ShowGd;
-import com.example.quanlythuvien.KHKT.Showkhkt;
+import com.example.quanlythuvien.GD.GDFragMent;
+import com.example.quanlythuvien.KHKT.KHKTFragMent;
 
 public class Chontheloai extends AppCompatActivity {
     ImageView imgkhkt,imgcntt,imggt,imgttt,imgvhnt,imgnttc,imgthoatshow;
@@ -26,7 +26,7 @@ public class Chontheloai extends AppCompatActivity {
         imgkhkt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(Chontheloai.this, Showkhkt.class);
+                Intent intent=new Intent(Chontheloai.this, KHKTFragMent.class);
                 startActivity(intent);
             }
         });
@@ -48,7 +48,7 @@ public class Chontheloai extends AppCompatActivity {
         imggt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(Chontheloai.this, ShowGd.class);
+                Intent intent=new Intent(Chontheloai.this, GDFragMent.class);
                 startActivity(intent);
             }
         });

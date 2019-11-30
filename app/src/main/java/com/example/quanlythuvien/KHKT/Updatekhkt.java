@@ -53,8 +53,8 @@ public class Updatekhkt extends AppCompatActivity {
     }
 
     private void loaddata() {
-        Bundle ten = getIntent().getBundleExtra("ahihi");
-        Book sach=(Book) ten.getSerializable("key");
+        Bundle ten = getIntent().getBundleExtra("ahihikt");
+        Book sach=(Book) ten.getSerializable("keykt");
         edtmasachup.setText(sach.getId());
         edttensachup.setText(sach.getTensach());
         edttacgiaup.setText(sach.getTacgia());
@@ -70,7 +70,7 @@ public class Updatekhkt extends AppCompatActivity {
         final String ncb=edtnxbup.getText().toString();
         final int sotrang=Integer.parseInt(edtsotrangup.getText().toString());
         Book clsbook=new Book(ma,ten,tacgia,ncb,sotrang);
-        final DatabaseReference mta = FirebaseDatabase.getInstance().getReference("KHOA HOC-KI THUAT");
+        final DatabaseReference mta = FirebaseDatabase.getInstance().getReference("KHOA HOC KI THUAT");
         final Query query = mta.orderByChild("id").equalTo(clsbook.getId());
         query.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override

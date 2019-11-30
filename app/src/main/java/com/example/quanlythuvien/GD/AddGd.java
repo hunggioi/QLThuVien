@@ -18,8 +18,8 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class AddGd extends AppCompatActivity {
 
-    EditText edtmasacch,edttensach,edttacgia,edtnxb,edtsotrang;
-    Button btnthemsach,btnthoatthem;
+    private EditText edtmasacch,edttensach,edttacgia,edtnxb,edtsotrang;
+    private Button btnthemsach,btnthoatthem;
     private DatabaseReference mta;
 
     @Override
@@ -36,8 +36,11 @@ public class AddGd extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Luu();
-                Intent intent=new Intent(AddGd.this, ShowGd.class);
-                startActivity(intent);
+                GDFragMent nx = new GDFragMent();
+                getSupportFragmentManager().beginTransaction().commit();
+                nx.onClick(v);
+                finish();
+
             }
         });
         btnthoatthem.setOnClickListener(new View.OnClickListener() {
@@ -54,7 +57,7 @@ public class AddGd extends AppCompatActivity {
         String nxb=edtnxb.getText().toString();
         int sotrang=Integer.parseInt(edtsotrang.getText().toString());
         Book clsSach=new Book(ma,ten,tacgia,nxb,sotrang);
-        mta.child("GIAO TRINH").push().setValue(clsSach, new DatabaseReference.CompletionListener() {
+        mta.child("GIAO DUC").push().setValue(clsSach, new DatabaseReference.CompletionListener() {
             @Override
             public void onComplete(@Nullable DatabaseError databaseError, @NonNull DatabaseReference databaseReference) {
                 if(databaseError ==null){
