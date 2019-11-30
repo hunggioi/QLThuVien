@@ -40,36 +40,36 @@
                     android:host="github.com" />
             </intent-filter>
         </activity>
-        <activity android:name=".showInfor.Showkhkt"></activity>
+        <activity android:name=".KHKT.Showkhkt"></activity>
         <activity android:name=".account.Dangki"></activity>
-        <activity android:name=".addBook.Addsachkhkt"></activity>
-        <activity android:name=".information.Thongtinkhkt"></activity>
-        <activity android:name=".update.Updatekhkt"></activity>
+        <activity android:name=".KHKT.Addsachkhkt"></activity>
+        <activity android:name=".KHKT.Thongtinkhkt"></activity>
+        <activity android:name=".KHKT.Updatekhkt"></activity>
         <activity android:name=".Chontheloai"></activity>
-        <activity android:name=".showInfor.Showcntt"></activity>
-        <activity android:name=".addBook.addsachcntt"></activity>
-        <activity android:name=".information.Thongtincntt"></activity>
-        <activity android:name=".update.Updatecntt"></activity>
-        <activity android:name=".showInfor.Shownttc"></activity>
-        <activity android:name=".update.Updatenttc"></activity>
-        <activity android:name=".information.Thongtinnttc"></activity>
-        <activity android:name=".addBook.addnttc"></activity>
-        <activity android:name=".showInfor.Showgt"></activity>
-        <activity android:name=".addBook.addgt"></activity>
-        <activity android:name=".information.Thongtingt"></activity>
-        <activity android:name=".update.Updategt"></activity>
-        <activity android:name=".showInfor.Showvhnt"></activity>
-        <activity android:name=".addBook.addvhnt"></activity>
-        <activity android:name=".information.Thongtinvhnt"></activity>
-        <activity android:name=".update.Updatevhnt"></activity>
-        <activity android:name=".showInfor.Showttt"></activity>
-        <activity android:name=".addBook.addttt"></activity>
+        <activity android:name=".CNTT.Showcntt"></activity>
+        <activity android:name=".CNTT.addsachcntt"></activity>
+        <activity android:name=".CNTT.Thongtincntt"></activity>
+        <activity android:name=".CNTT.Updatecntt"></activity>
+        <activity android:name=".Shownttc"></activity>
+        <activity android:name=".Updatenttc"></activity>
+        <activity android:name=".Thongtinnttc"></activity>
+        <activity android:name=".addnttc"></activity>
+        <activity android:name=".GD.ShowGd"></activity>
+        <activity android:name=".GD.AddGd"></activity>
+        <activity android:name=".GD.ThongtinGd"></activity>
+        <activity android:name=".GD.UpdateGd"></activity>
+        <activity android:name=".Showvhnt"></activity>
+        <activity android:name=".addvhnt"></activity>
+        <activity android:name=".Thongtinvhnt"></activity>
+        <activity android:name=".Updatevhnt"></activity>
+        <activity android:name=".Showttt"></activity>
+        <activity android:name=".addttt"></activity>
 
-        <activity android:name=".information.Thongtinttt"></activity>
-        <activity android:name=".update.Updatettt"></activity>
+        <activity android:name=".Thongtinttt"></activity>
+        <activity android:name=".Updatettt"></activity>
         <activity android:name=".account.Dangnhap"></activity>
         <activity android:name=".MainActivity"></activity>
-        <activity android:name=".Fragment.ThuVienFragMent"></activity>
+        <activity android:name=".ThuVienFragMent"></activity>
 
 
     </application>

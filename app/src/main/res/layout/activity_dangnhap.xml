@@ -7,15 +7,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-<<<<<<< HEAD
-    tools:context=".Dangnhap">
-=======
 
     tools:context=".account.Dangnhap">
 
 
 
->>>>>>> 4db781cb2089458bd826e0b30128bb409bda831d
+
+
     <LinearLayout
         android:foreground="?android:attr/selectableItemBackground"
         android:id="@+id/btnBack"
@@ -193,9 +191,5 @@
         </LinearLayout>
 
     </ScrollView>
-<<<<<<< HEAD
 
-
-=======
->>>>>>> tins
 </LinearLayout>

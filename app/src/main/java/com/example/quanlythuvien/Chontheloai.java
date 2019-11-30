@@ -7,12 +7,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.example.quanlythuvien.showInfor.Showcntt;
-import com.example.quanlythuvien.showInfor.Showgt;
-import com.example.quanlythuvien.showInfor.Showkhkt;
-import com.example.quanlythuvien.showInfor.Shownttc;
-import com.example.quanlythuvien.showInfor.Showttt;
-import com.example.quanlythuvien.showInfor.Showvhnt;
+import com.example.quanlythuvien.CNTT.Showcntt;
+import com.example.quanlythuvien.GD.ShowGd;
+import com.example.quanlythuvien.KHKT.Showkhkt;
 
 public class Chontheloai extends AppCompatActivity {
     ImageView imgkhkt,imgcntt,imggt,imgttt,imgvhnt,imgnttc,imgthoatshow;
@@ -51,7 +48,7 @@ public class Chontheloai extends AppCompatActivity {
         imggt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(Chontheloai.this, Showgt.class);
+                Intent intent=new Intent(Chontheloai.this, ShowGd.class);
                 startActivity(intent);
             }
         });
