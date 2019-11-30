@@ -8,9 +8,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.quanlythuvien.Fragment.ThuVienFragMent;
 import com.example.quanlythuvien.account.Dangki;
-import com.example.quanlythuvien.account.Dangnhap;
 
 public class MainActivity extends AppCompatActivity {
     private TextView dangnhap;

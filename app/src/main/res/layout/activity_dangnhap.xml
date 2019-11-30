@@ -12,6 +12,11 @@
 
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> Tin
     <LinearLayout
         android:foreground="?android:attr/selectableItemBackground"
         android:id="@+id/btnBack"
@@ -189,4 +194,8 @@
         </LinearLayout>
 
     </ScrollView>
+<<<<<<< HEAD
+=======
+
+>>>>>>> Tin
 </LinearLayout>
