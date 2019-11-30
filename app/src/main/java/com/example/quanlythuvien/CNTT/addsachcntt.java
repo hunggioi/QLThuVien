@@ -42,7 +42,7 @@ public class addsachcntt extends AppCompatActivity {
                 Luu();
 //                Intent intent=new Intent(addsachcntt.this, CNTTFragMent.class);
 //                startActivity(intent);
-                ThuVienFragMent nexfrag = new ThuVienFragMent();
+                new ThuVienFragMent();
                 getSupportFragmentManager().beginTransaction().commit();
                 finish();
             }

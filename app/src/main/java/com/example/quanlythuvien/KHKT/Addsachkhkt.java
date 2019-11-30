@@ -44,7 +44,7 @@ public class Addsachkhkt extends AppCompatActivity {
                 Luu();
 //                Intent intent=new Intent(Addsachkhkt.this, Showkhkt.class);
 //                startActivity(intent);
-                ThuVienFragMent nexfrag = new ThuVienFragMent();
+                new ThuVienFragMent();
                 getSupportFragmentManager().beginTransaction().commit();
                 finish();
             }
