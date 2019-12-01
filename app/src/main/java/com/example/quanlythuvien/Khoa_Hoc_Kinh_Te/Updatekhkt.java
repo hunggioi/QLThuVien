@@ -1,4 +1,4 @@
-package com.example.quanlythuvien.CNTT;
+package com.example.quanlythuvien.Khoa_Hoc_Kinh_Te;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -19,7 +19,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
-public class Updatecntt extends AppCompatActivity {
+public class Updatekhkt extends AppCompatActivity {
     EditText edtmasachup,edttensachup,edttacgiaup,edtnxbup,edtsotrangup;
     Button btnupdate;
     private LinearLayout btnback;
@@ -27,7 +27,7 @@ public class Updatecntt extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.updatecntt);
+        setContentView(R.layout.updatekhkt);
         addcontrols();
         loaddata();
 
@@ -36,24 +36,24 @@ public class Updatecntt extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 update();
-                Updatecntt.this.onBackPressed();
-                CNTTFragMent nextfrag = new CNTTFragMent();
+                Updatekhkt.this.onBackPressed();
+                KHKTFragMent khktFragMent = new KHKTFragMent();
                 getSupportFragmentManager().beginTransaction().commit();
-//                Intent intent=new Intent(Updatecntt.this, Showcntt.class);
+//                Intent intent=new Intent(Updatekhkt.this, Showkhkt.class);
 //                startActivity(intent);
             }
         });
         btnback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Updatecntt.this.onBackPressed();
+                Updatekhkt.this.onBackPressed();
             }
         });
     }
 
     private void loaddata() {
-        Bundle ten = getIntent().getBundleExtra("ahihicntt");
-        Book sach=(Book) ten.getSerializable("keycntt");
+        Bundle ten = getIntent().getBundleExtra("ahihikt");
+        Book sach=(Book) ten.getSerializable("keykt");
         edtmasachup.setText(sach.getId());
         edttensachup.setText(sach.getTensach());
         edttacgiaup.setText(sach.getTacgia());
@@ -69,7 +69,7 @@ public class Updatecntt extends AppCompatActivity {
         final String ncb=edtnxbup.getText().toString();
         final int sotrang=Integer.parseInt(edtsotrangup.getText().toString());
         Book clsbook=new Book(ma,ten,tacgia,ncb,sotrang);
-        final DatabaseReference mta = FirebaseDatabase.getInstance().getReference("CONG NGHE THONG TIN");
+        final DatabaseReference mta = FirebaseDatabase.getInstance().getReference("KHOA HOC KI THUAT");
         final Query query = mta.orderByChild("id").equalTo(clsbook.getId());
         query.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -83,13 +83,13 @@ public class Updatecntt extends AppCompatActivity {
                         mta.child(postkey).child("sotrang").setValue(sotrang);
                         mta.child(postkey).child("nxb").setValue(ncb);
                     }
-                    Toast.makeText(Updatecntt.this, "Cập nhật thành công !", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Updatekhkt.this, "Cập nhật thành công !", Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-                Toast.makeText(Updatecntt.this, "Lỗi cập nhật !", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Updatekhkt.this, "Lỗi cập nhật !", Toast.LENGTH_SHORT).show();
             }
         });
     }

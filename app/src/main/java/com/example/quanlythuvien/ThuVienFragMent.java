@@ -9,12 +9,13 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
-import com.example.quanlythuvien.CNTT.CNTTFragMent;
-import com.example.quanlythuvien.GD.GDFragMent;
-import com.example.quanlythuvien.KHKT.KHKTFragMent;
+import com.example.quanlythuvien.Cong_Nghe_Thong_Tin.CNTTFragMent;
+import com.example.quanlythuvien.Giao_Duc.GDFragMent;
+import com.example.quanlythuvien.Giai_Tri.GiaiTriFragment;
+import com.example.quanlythuvien.Khoa_Hoc_Kinh_Te.KHKTFragMent;
 
 public class ThuVienFragMent extends AppCompatActivity{
-    private TextView btn_cntt, btn_gdxh, btn_khkt;
+//    private TextView btn_cntt, btn_gdxh, btn_khkt;
     private ViewPager view_pager;
     private TabLayout tab_layout;
 
@@ -46,14 +47,16 @@ private class PageAdapter extends FragmentPagerAdapter {
                     return new CNTTFragMent();
                 case 1:
                     return new KHKTFragMent();
-                default:
+                case 2:
                     return new GDFragMent();
+                default:
+                    return new GiaiTriFragment();
             }
         }
 
         @Override
         public int getCount() {
-            return 3;
+            return 4;
         }
 
             @Nullable
@@ -61,11 +64,13 @@ private class PageAdapter extends FragmentPagerAdapter {
             public CharSequence getPageTitle(int i){
                 switch (i) {
                     case 0:
-                        return "CNTT";
+                        return "Công Nghệ Thông Tin";
                     case 1:
-                        return "Khoa Học KT";
-                    default:
+                        return "Khoa Học Kinh Tế";
+                    case 2:
                         return "Giáo Dục";
+                    default:
+                        return "Giải Trí";
 
             }
         }

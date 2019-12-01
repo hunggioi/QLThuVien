@@ -1,4 +1,4 @@
-package com.example.quanlythuvien.CNTT;
+package com.example.quanlythuvien.Cong_Nghe_Thong_Tin;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -12,13 +12,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.quanlythuvien.Book;
-import com.example.quanlythuvien.ThuVienFragMent;
 import com.example.quanlythuvien.R;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class addsachcntt extends AppCompatActivity {
+
     private EditText edtmasacch,edttensach,edttacgia,edtnxb,edtsotrang;
     private Button btnthemsach;
     private DatabaseReference mta;
@@ -31,7 +31,7 @@ public class addsachcntt extends AppCompatActivity {
         setContentView(R.layout.themcntt);
         addcontrols();
         addevent();
-        mta= FirebaseDatabase.getInstance().getReference();
+        mta = FirebaseDatabase.getInstance().getReference();
         text_title.setText("Thêm sách");
     }
 
@@ -42,8 +42,9 @@ public class addsachcntt extends AppCompatActivity {
                 Luu();
 //                Intent intent=new Intent(addsachcntt.this, CNTTFragMent.class);
 //                startActivity(intent);
-                new ThuVienFragMent();
+                CNTTFragMent cnttFragMent = new CNTTFragMent();
                 getSupportFragmentManager().beginTransaction().commit();
+                cnttFragMent.onClick(v);
                 finish();
             }
         });
@@ -54,13 +55,14 @@ public class addsachcntt extends AppCompatActivity {
             }
         });
     }
+
     private void Luu() {
         String ma=edtmasacch.getText().toString();
         String ten=edttensach.getText().toString();
         String tacgia=edttacgia.getText().toString();
         String nxb=edtnxb.getText().toString();
         int sotrang=Integer.parseInt(edtsotrang.getText().toString());
-        Book clsSach=new Book(ma,ten,tacgia,nxb,sotrang);
+        Book clsSach = new Book(ma,ten,tacgia,nxb,sotrang);
         mta.child("CONG NGHE THONG TIN").push().setValue(clsSach, new DatabaseReference.CompletionListener() {
             @Override
             public void onComplete(@Nullable DatabaseError databaseError, @NonNull DatabaseReference databaseReference) {
@@ -73,6 +75,7 @@ public class addsachcntt extends AppCompatActivity {
             }
         });
     }
+
     private void addcontrols() {
         edtmasacch= this.<EditText>findViewById(R.id.edtmasach);
         edttensach= this.<EditText>findViewById(R.id.edttensach);

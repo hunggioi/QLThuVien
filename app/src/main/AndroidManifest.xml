@@ -40,24 +40,22 @@
                     android:host="github.com" />
             </intent-filter>
         </activity>
-        <activity android:name=".KHKT.Showkhkt"></activity>
         <activity android:name=".account.Dangki"></activity>
-        <activity android:name=".KHKT.Addsachkhkt"></activity>
-        <activity android:name=".KHKT.Thongtinkhkt"></activity>
-        <activity android:name=".KHKT.Updatekhkt"></activity>
+        <activity android:name=".Khoa_Hoc_Kinh_Te.Addsachkhkt"></activity>
+        <activity android:name=".Khoa_Hoc_Kinh_Te.Thongtinkhkt"></activity>
+        <activity android:name=".Khoa_Hoc_Kinh_Te.Updatekhkt"></activity>
         <activity android:name=".Chontheloai"></activity>
-        <activity android:name=".CNTT.Showcntt"></activity>
-        <activity android:name=".CNTT.addsachcntt"></activity>
-        <activity android:name=".CNTT.Thongtincntt"></activity>
-        <activity android:name=".CNTT.Updatecntt"></activity>
+        <activity android:name=".Showcntt"></activity>
+        <activity android:name=".Cong_Nghe_Thong_Tin.addsachcntt"></activity>
+        <activity android:name=".Cong_Nghe_Thong_Tin.Thongtincntt"></activity>
+        <activity android:name=".Cong_Nghe_Thong_Tin.Updatecntt"></activity>
         <activity android:name=".Shownttc"></activity>
         <activity android:name=".Updatenttc"></activity>
         <activity android:name=".Thongtinnttc"></activity>
         <activity android:name=".addnttc"></activity>
-        <activity android:name=".GD.ShowGd"></activity>
-        <activity android:name=".GD.AddGd"></activity>
-        <activity android:name=".GD.ThongtinGd"></activity>
-        <activity android:name=".GD.UpdateGd"></activity>
+        <activity android:name=".Giao_Duc.AddGd"></activity>
+        <activity android:name=".Giao_Duc.ThongtinGd"></activity>
+        <activity android:name=".Giao_Duc.UpdateGd"></activity>
         <activity android:name=".Showvhnt"></activity>
         <activity android:name=".addvhnt"></activity>
         <activity android:name=".Thongtinvhnt"></activity>

@@ -1,4 +1,4 @@
-package com.example.quanlythuvien.KHKT;
+package com.example.quanlythuvien.Giao_Duc;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -20,15 +20,15 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
-public class Updatekhkt extends AppCompatActivity {
+public class UpdateGd extends AppCompatActivity {
     EditText edtmasachup,edttensachup,edttacgiaup,edtnxbup,edtsotrangup;
-    Button btnupdate;
+    Button btnupdate,btnthoatup;
     private LinearLayout btnback;
     private TextView txt_toolbar;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.updatekhkt);
+        setContentView(R.layout.updategt);
         addcontrols();
         loaddata();
 
@@ -37,40 +37,37 @@ public class Updatekhkt extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 update();
-                Updatekhkt.this.onBackPressed();
-                KHKTFragMent khktFragMent = new KHKTFragMent();
-                getSupportFragmentManager().beginTransaction().commit();
-//                Intent intent=new Intent(Updatekhkt.this, Showkhkt.class);
-//                startActivity(intent);
+                UpdateGd.this.onBackPressed();
+                Intent intent=new Intent(UpdateGd.this, GDFragMent.class);
+                startActivity(intent);
             }
         });
         btnback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Updatekhkt.this.onBackPressed();
+                UpdateGd.this.onBackPressed();
             }
         });
     }
 
-    private void loaddata() {
-        Bundle ten = getIntent().getBundleExtra("ahihi");
-        Book sach=(Book) ten.getSerializable("key");
+    private void loaddata()
+    {
+        Bundle ten = getIntent().getBundleExtra("ahihigd");
+        Book sach=(Book) ten.getSerializable("keygd");
         edtmasachup.setText(sach.getId());
         edttensachup.setText(sach.getTensach());
         edttacgiaup.setText(sach.getTacgia());
         edtnxbup.setText(sach.getNxb());
         edtsotrangup.setText(""+sach.getSotrang());
     }
-
     private void update()
-    {
-        String ma=edtmasachup.getText().toString();
+    {   String ma=edtmasachup.getText().toString();
         final String ten=edttensachup.getText().toString();
         final String tacgia=edttacgiaup.getText().toString();
         final String ncb=edtnxbup.getText().toString();
         final int sotrang=Integer.parseInt(edtsotrangup.getText().toString());
         Book clsbook=new Book(ma,ten,tacgia,ncb,sotrang);
-        final DatabaseReference mta = FirebaseDatabase.getInstance().getReference("KHOA HOC-KI THUAT");
+        final DatabaseReference mta = FirebaseDatabase.getInstance().getReference("GIAO TRINH");
         final Query query = mta.orderByChild("id").equalTo(clsbook.getId());
         query.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -84,13 +81,13 @@ public class Updatekhkt extends AppCompatActivity {
                         mta.child(postkey).child("sotrang").setValue(sotrang);
                         mta.child(postkey).child("nxb").setValue(ncb);
                     }
-                    Toast.makeText(Updatekhkt.this, "Cập nhật thành công !", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(UpdateGd.this, "Cập nhật thành công !", Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-                Toast.makeText(Updatekhkt.this, "Lỗi cập nhật !", Toast.LENGTH_SHORT).show();
+                Toast.makeText(UpdateGd.this, "Lỗi cập nhật !", Toast.LENGTH_SHORT).show();
             }
         });
     }

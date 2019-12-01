@@ -9,11 +9,6 @@
     android:gravity="center"
 
     tools:context=".account.Dangnhap">
-
-
-
-
-
     <LinearLayout
         android:foreground="?android:attr/selectableItemBackground"
         android:id="@+id/btnBack"

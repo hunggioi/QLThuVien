@@ -1,4 +1,4 @@
-package com.example.quanlythuvien.KHKT;
+package com.example.quanlythuvien.Cong_Nghe_Thong_Tin;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,24 +13,26 @@ import android.widget.TextView;
 import com.example.quanlythuvien.Book;
 import com.example.quanlythuvien.R;
 
-public class Thongtinkhkt extends AppCompatActivity {
+public class Thongtincntt extends AppCompatActivity {
     EditText edtmasachtt,edttacgiatt,edttensachtt,edtnxbtt,edtsotrangtt;
     Button btncapnhat;
     private Book sach;
     private LinearLayout btnBack;
     private TextView txt_toolbar;
+
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.thongtinkhkt);
+        setContentView(R.layout.thongtincntt);
         addcontrols();
         addevent();
         loaddata();
     }
 
     private void loaddata() {
-        Bundle ten=getIntent().getBundleExtra("ahihi");
-        sach =(Book) ten.getSerializable("khau");
+        Bundle ten=getIntent().getBundleExtra("ahihicntt");
+        sach =(Book) ten.getSerializable("gioicntt");
         edtmasachtt.setText(sach.getId());
         edttensachtt.setText(sach.getTensach());
         edttacgiatt.setText(sach.getTacgia());
@@ -43,21 +45,21 @@ public class Thongtinkhkt extends AppCompatActivity {
         btncapnhat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(Thongtinkhkt.this, Updatekhkt.class);
+                Intent intent=new Intent(Thongtincntt.this, Updatecntt.class);
                 Bundle load = new Bundle();
-                load.putSerializable("key", sach);
-                intent.putExtra("ahihi",load);
+                load.putSerializable("keycntt", sach);
+                intent.putExtra("ahihicntt",load);
                 startActivity(intent);
             }
         });
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Thongtinkhkt.this.onBackPressed();
+                Thongtincntt.this.onBackPressed();
             }
         });
         txt_toolbar.setText("Chi tiết sách");
-    }
+ }
 
     private void addcontrols() {
         edtmasachtt= this.<EditText>findViewById(R.id.edtmasachtt);
@@ -65,8 +67,9 @@ public class Thongtinkhkt extends AppCompatActivity {
         edttacgiatt= this.<EditText>findViewById(R.id.edttacgiatt);
         edtnxbtt= this.<EditText>findViewById(R.id.edtnxbtt);
         edtsotrangtt= this.<EditText>findViewById(R.id.edtsotrangtt);
-        btnBack= findViewById(R.id.btnBack);
+
         btncapnhat= this.<Button>findViewById(R.id.btncapnhat);
         txt_toolbar = findViewById(R.id.text_title);
+        btnBack= findViewById(R.id.btnBack);
     }
 }

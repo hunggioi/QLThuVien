@@ -1,4 +1,4 @@
-package com.example.quanlythuvien.GD;
+package com.example.quanlythuvien.Giai_Tri;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,18 +7,23 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.example.quanlythuvien.Book;
 import com.example.quanlythuvien.R;
 
-public class ThongtinGd extends AppCompatActivity {
+public class Thongtinnttc extends AppCompatActivity {
     EditText edtmasachtt,edttacgiatt,edttensachtt,edtnxbtt,edtsotrangtt;
-    Button btnthoattt,btncapnhat;
+    Button btncapnhat;
     private Book sach;
+    private LinearLayout btnBack;
+    private TextView txt_toolbar;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.thongtingt);
+        setContentView(R.layout.thongtinnttc);
         addcontrols();
         addevent();
         loaddata();
@@ -38,19 +43,20 @@ public class ThongtinGd extends AppCompatActivity {
         btncapnhat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(ThongtinGd.this, UpdateGd.class);
+                Intent intent=new Intent(Thongtinnttc.this, Updatenttc.class);
                 Bundle load = new Bundle();
                 load.putSerializable("keycntt", sach);
                 intent.putExtra("ahihicntt",load);
                 startActivity(intent);
             }
         });
-        btnthoattt.setOnClickListener(new View.OnClickListener() {
+        btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ThongtinGd.this.onBackPressed();
+                Thongtinnttc.this.onBackPressed();
             }
         });
+        txt_toolbar.setText("Chi tiết sách");
     }
 
     private void addcontrols() {
@@ -59,7 +65,8 @@ public class ThongtinGd extends AppCompatActivity {
         edttacgiatt= this.<EditText>findViewById(R.id.edttacgiatt);
         edtnxbtt= this.<EditText>findViewById(R.id.edtnxbtt);
         edtsotrangtt= this.<EditText>findViewById(R.id.edtsotrangtt);
-        btnthoattt= this.<Button>findViewById(R.id.btnthoattt);
         btncapnhat= this.<Button>findViewById(R.id.btncapnhat);
+        txt_toolbar = findViewById(R.id.text_title);
+        btnBack= findViewById(R.id.btnBack);
     }
 }
