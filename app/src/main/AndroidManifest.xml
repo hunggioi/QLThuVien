@@ -68,6 +68,7 @@
         <activity android:name=".account.Dangnhap"></activity>
         <activity android:name=".MainActivity"></activity>
         <activity android:name=".ThuVienFragMent"></activity>
+        <activity android:name=".Giai_Tri.addnttc"></activity>
 
 
     </application>
