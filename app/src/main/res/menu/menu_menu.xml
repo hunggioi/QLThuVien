@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:title="Settings"
+        android:id="@+id/btn_setting"/>
+
+
+
+    <item android:title="Search"
+        android:id="@+id/btn_search"
+        app:showAsAction="always"
+        android:icon="@drawable/search"
+        />
+
+    <item android:title="Feedback"
+        android:id="@+id/btn_feedback"/>
+
+    <item android:title="Exit"
+        android:id="@+id/btn_exit"/>
+
+</menu>
