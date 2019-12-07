@@ -80,16 +80,19 @@ public class GiaiTriFragment extends Fragment implements View.OnClickListener {
 
             }
         });
-        grvsach.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(getActivity(), Thongtinnttc.class);
-                Bundle ten = new Bundle();
-                ten.putSerializable("khaucntt", sachArrayList.get(position));
-                intent.putExtra("ahihicntt", ten);
-                startActivity(intent);
-            }
-        });
+//        grvsach.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//
+//                Intent intent = new Intent(getActivity(), Thongtinnttc.class);
+//                Bundle ten = new Bundle();
+//                ten.putSerializable("gioigiaitri", sachArrayList.get(position));
+//                intent.putExtra("ahihigiaitri", ten);
+//                startActivity(intent);
+//
+//
+//            }
+//        });
         grvsach.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
@@ -105,7 +108,7 @@ public class GiaiTriFragment extends Fragment implements View.OnClickListener {
     // Dialog
     public void showAlertDialog(final int pos){
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-        builder.setMessage("Bạn có chắc muốn xoá");
+        builder.setMessage("Bạn muốn chọn");
         builder.setCancelable(true);
         builder.setPositiveButton("Xoá", new DialogInterface.OnClickListener() {
             @Override
@@ -134,11 +137,23 @@ public class GiaiTriFragment extends Fragment implements View.OnClickListener {
             }
         });
 
-        builder.setNeutralButton("Không", new DialogInterface.OnClickListener() {
-            final Dialog dialog = new Dialog(getActivity());
+//        builder.setNeutralButton("Không", new DialogInterface.OnClickListener() {
+//            final Dialog dialog = new Dialog(getActivity());
+//            @Override
+//            public void onClick(DialogInterface dialog, int which) {
+//                dialog.dismiss();
+//
+//            }
+//        });
+        builder.setNeutralButton("Xem", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                dialog.dismiss();
+                getActivity().onBackPressed();
+                Intent intent=new Intent(getActivity(), Thongtinnttc.class);
+                Bundle ten=new Bundle();
+                ten.putSerializable("gioigiaitri",sachArrayList.get(pos));
+                intent.putExtra("ahihigiaitri",ten);
+                startActivity(intent);
 
             }
         });

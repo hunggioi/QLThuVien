@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import com.example.quanlythuvien.Chontheloai;
 import com.example.quanlythuvien.R;
+import com.example.quanlythuvien.ThuVienFragMent;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -117,7 +118,7 @@ private void dangnhapht()
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()) {
                         Toast.makeText(Dangnhap.this,"Đăng nhập thành công!",Toast.LENGTH_SHORT).show();
-                        Intent intent=new Intent(Dangnhap.this, Chontheloai.class);
+                        Intent intent=new Intent(Dangnhap.this, ThuVienFragMent.class);
                         startActivity(intent);
 
                     } else {
