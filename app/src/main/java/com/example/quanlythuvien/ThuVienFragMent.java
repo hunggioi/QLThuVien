@@ -102,7 +102,7 @@ public class ThuVienFragMent extends AppCompatActivity{
                     case 0:
                         return "Công Nghệ Thông Tin";
                     case 1:
-                        return "Khoa Học Kinh Tế";
+                        return "Khoa Học Kỹ Thuật";
                     case 2:
                         return "Giáo Dục";
                     default:
